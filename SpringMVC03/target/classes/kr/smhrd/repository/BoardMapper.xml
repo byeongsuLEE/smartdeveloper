@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.smhrd.repository.BoardMapper">
+  
+  <!-- board table 모든 게시물을 가져오는 SQL -->
+  <select id="getList" resultType="kr.smhrd.entity.Board">
+     select * from board order by idx desc
+  </select>
+  <insert id="register" parameterType="kr.smhrd.entity.Board">
+     insert into board(title,content,writer)
+     values(#{title},#{content},#{writer})
+  </insert>
+</mapper>
