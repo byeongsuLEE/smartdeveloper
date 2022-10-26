@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+          
+            width: 200px;
+            height : 200px;
+            background-color: red;
+        }
+        div:active+p{
+            color: pink;
+
+        }
+        div:hover{
+            width: 400px;
+            background: aquamarine;
+
+        }
+        /* div를 클릭하고 있을 때 span 태그사이의 글쓰 크기를 50 px 로 바꾸기*/
+        div:active+p>span{
+            font-size: 50px
+        }
+    </style>
+</head>
+<body>
+    <!--네모박스로 구역박스 잡을때 div 사용-->
+    <div></div>
+    <p>반응선택자<span>색깔바꾸기</span></p>
+</body>
+</html>

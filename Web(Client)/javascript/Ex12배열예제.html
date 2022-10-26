@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [23,54,78,13,44];
+        let big = 0;
+        for(let i=0 ;i<array.length;i++)
+        {           
+            if (big<array[i]){
+                big=array[i];
+            }
+        }
+        array.sort()
+   
+        console.log(array+"에서 가장 큰수는 "+array[array.length-1]+"입니다.");
+
+        //JS 에서 배열은 가변적이다 (크기 고정 X)
+        let array1 =[1,2,3];
+        array1[3]=4;
+        array1.push(5)
+        console.log(array1)
+        
+        //배열 삭제
+        array1.pop();
+        console.log(array1)
+    
+    </script>
+</body>
+</html>

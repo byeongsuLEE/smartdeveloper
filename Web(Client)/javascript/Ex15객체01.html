@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //휴대폰 객체 만들기
+        //번호 , 인터넷하다 , 사진을 찍다 
+        //객체는 인덱스 번호가 없고 ,key 값이 있는 배열이다.
+        let phone = {
+            number : "01040175180" ,
+            internet : function(){
+                console.log("인터넷을 하다")
+            },
+            camera :function(){
+                console.log("사진을")
+            },
+            show : function(){
+        
+                //번호를 출력시키는 기능
+                console.log(this.number+"제 번호입니다")
+            }
+        
+        }
+        //phone 객체에서 전화번호출력
+        console.log(phone['number'])
+        //객체 데이터수정
+        phone.number = "01011112222";
+        phone.camera();
+        //phone 객체에 사용자 이름추가!
+        phone.name = "승환";
+        console.log(phone);
+        phone.show();
+    </script>
+</body>
+</html>

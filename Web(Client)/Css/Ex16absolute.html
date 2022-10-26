@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            border : 1px solid red;
+            position: absolute;
+
+        }
+        div{
+            width:300px;
+            height : 300px;
+            border:1px solid black;
+            margin-top : 50px;
+            position: relative;
+        }
+
+        .s2{
+            /*  바디에서 아래로 10px  */
+            /*  우리가 원하는건 div 기준으로 하고싶다 */
+            top: 10px;
+        }
+        .s3{
+            /* 바디에서 10 px 왼쪽으로이동 */
+            right : 10px;
+        }
+        .s4{
+            bottom: 10px;
+        }
+        .s5{
+            left: 20px
+        }
+    </style>
+</head>
+<body>
+    <!-- div postion : static 상태 -->
+    <!-- 지금 상태에서 span태그의 postion absolute 를 못합니다.-->
+    <div>
+        <span class="s1">span1</span>
+        <span class="s2">span2</span>
+        <span class="s3">span3</span>
+        <span class="s4">span4</span>
+        <span class="s5">span5</span>
+    </div>
+</body>
+</html>

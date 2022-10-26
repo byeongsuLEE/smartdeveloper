@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자손선택자 (자식도 자손에 포함) */
+        div span{
+            color: red;
+
+        }
+
+        ol>li#li1{
+            color: red;
+        }
+
+        li+li{
+            color: purple;
+        }
+        li~li{
+            color: pink;
+        }
+
+        /* ol 자식중에 2번째 자식에만 멀하겟다*/
+        /* 주의 ol >li 는 li만 포함하는게아니라 다른것도 포함하기때문에 4를써서 바꾸자 */
+        ol>li:nth-child(3){
+            font-size : 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <strong>연수생 수칙</strong>
+        <ol>
+            <li>지각하지 않기</li>
+            <li>결석하지 않기</li>
+            <span>(불가피할 땐 꼭 담당연구원에게 미리 말하기)</span>
+            <li id="li1">복습하기</li>
+            <li>큐알잘찍기</li>
+        </ol>
+    </div>
+</body>
+</html>

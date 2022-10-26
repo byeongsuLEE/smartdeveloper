@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,span,a{
+            background-color: burlywood;
+        }
+        div{
+            /* block : 크기 지정 가능! */
+
+            width : 200px;
+            height : 200px;
+            display: inline;
+        }
+
+        span{
+            /* inline : 크기 지정 불가능, 컨테츠 만큼만 영역을 가질 수 있음 */
+            width: 200px;
+            height: 200px;
+            display : inline-block
+        }
+        a{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--display 속성 : 기본값 - block -->
+    <div>하이</div>
+    <div>헤로효우</div>
+    <p>하이</p>
+    <hr>
+    <!-- display 속성 : 기본값 - inline()-->
+    <span>하이</span>
+    <a href="">하이 </a>
+</body>
+</html>

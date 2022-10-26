@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원피스 이미지</title>
+</head>
+<body>
+    <!-- 이미지 태그 -->
+    <!-- src : 출력할 이미지 경로 -->
+    <!-- 크기조정  width : 너비 , height = 높이-->
+
+    <!--절대 경로 : 어떤파일이 가진 고유한 경로 , 외부파일을 연결-->
+    <img width ="200px" height="200px" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.18169-9/11156244_1423763411273559_2991268234301505841_n.jpg?stp=cp0_dst-jpg_e15_q65_s480x480&_nc_cat=111&ccb=1-7&_nc_sid=110474&_nc_ohc=2YEoZYC2TLoAX-_rf9d&_nc_ht=scontent-ssn1-1.xx&oh=00_AT-JvjeApe9cum3s5LWcS7XJYveSqnoGDqNL3rFNeHt5qw&oe=6358CE17" alt="">
+    <!--alt : 이미지 경로가 잘못된 경우 설명 작성-->
+    
+    <!--상대 경로 : 특정 위치를 기준을 ㅗ파일을 찾는 경로 , 내이파일을 연결-->
+    <img src="../img2/images.jpg" alt="핑구이미지"></img>
+    <!-- ./ : 현재폴더 (html 폴더 내)를 기준으로  -->
+    <!-- / : 폴더 안으로 들어감-->
+
+    <!-- ../ : 지금있는 폴더에서 나가겠다 -->
+    <img src="../img2/images.jpg" alt="이미지">
+
+    <!-- / : 루트폴더(최상위 폴더)로 이동-->
+    <img src="/img2/images.jpg">
+
+  
+    
+</body>
+</html>

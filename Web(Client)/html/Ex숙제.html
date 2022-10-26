@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <table border="1">
+            
+            <tr>
+                <th align="left" bgcolor="gray" colspan="2">Step 1아이디/비번 입력</th> <br>
+            </tr>
+            <tr>
+                <td align="right">아이디:</td>
+                <td><input type="text"></td><br>
+            </tr>
+            <tr>
+                <td align="right">비밀번호:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td align="right">비밀번호 확인:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th align="left" colspan="2" bgcolor="gray">Step2: 개인정보</th>
+            </tr>
+            <tr>
+                <td align="right">성별:</td>
+                <td>
+                    남<input type="radio" name ="gender" >
+                    여<input type="radio" name ="gender">
+                </td>
+            </tr>
+            <tr>
+               <td align="right">혈액형:</td>
+               <td>
+                <select name="select">
+                    <option>A형</option>
+                    <option>B형</option>
+                    <option>AB형</option>
+                    <option>O형</option>
+                    
+                </select>
+
+
+            </tr>
+            <tr>
+                <td align="right">생일:</td>
+                <td><input type = "text" placeholder="연도-월-일"  pattern ="[0-1]{3}-[0-9]{4}-[0-9]{4}" title="###-####-#### 입력하세요"></td>
+            </tr>
+            <tr>
+                <th align="left" bgcolor="gray" colspan="2">Step3 : 선호도</th>
+            </tr>
+            <tr>
+                <td align="right">취미:</td>
+                <td align="left">축구<input type="checkbox" name ="hobby">
+                    야구<input type="checkbox" name ="hobby">
+                    농구<input type="checkbox" name ="hobby">
+                </td>
+            </tr>
+            <tr >
+                <td align="right">좋아하는 색깔</td>
+                <td align="left"><input type="color"></td>
+
+            </tr>
+            <tr>
+                <th align="left" bgcolor="gray" colspan="2">Step4:적고싶은말</th>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea cols="40" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> <input type="submit">
+                <input type="reset" name="" id=""></td>
+            </tr>
+
+
+        </table>
+        
+        <p> </p>
+    
+    </form>
+</body>
+</html>

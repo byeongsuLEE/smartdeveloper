@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--form : 서버로 데이터를 전송하기 위해 사용하는 태그-->
+    <!--action(필수) : 데이터를 어디로 전송할 건지-->
+    <!-- 서버가 안정해졌으면 #을쓰면됩니다.-->
+    <!-- method(선택): 어떤 방식으로 데이터를 전송할건지
+        (get-데이터를 url에 포함/post-패킷에 숨겨서)-->
+    <!-- get 방식 : url에 입력한 내용이 표시됨 
+         post 방식 : url에 입력한 내용이 표시 x 
+         작성하지 않으면 기본값은 get으로 전송-->
+
+
+    <form action="#" method="get">
+    <!-- 기본 텍스트창만들기-->
+        ID : <input type="text" name="id" placeholder="아이디 입력" required autofocus><br>
+        PW : <input type="password" name = "pw" placeholder="비밀번호 입력" required><br>
+        <input type="email" name ="email">
+        <input type="tel"name="tel" pattern ="[0-1]{3}-[0-9]{4}-[0-9]{4}" title="###-####-###입력해주세요" >
+        <br>
+        <h3>취미</h3>
+        <input type="checkbox" value="reading" name="hobby">독서
+        <input type="checkbox" value="exercising" name ="hobby">운동
+        <input type="checkbox" value="moving" name = "hobby">영화보기
+
+
+
+        <h3>성별</h3>
+        <input type="radio" value ="male" name="gender">남
+        <input type="radio" value ="female" name="gender">여
+
+        <br>
+        <input type = "file"><br>
+        <input type = "color">
+        <input type="date">
+        <input type="number" min = "0" max ="10"> <br>
+
+        <select name="select">
+            <option>a</option>
+            <option >b</option>
+            <option>c</option>
+        </select>
+
+        <textarea rows = "20" cols="100" name ="text"></textarea>
+
+        <input type="button">
+        <input type="reset" value = "reset">
+        <input type="submit" value = "submit">
+        
+
+    </form>
+ 
+        
+
+</body>
+</html>

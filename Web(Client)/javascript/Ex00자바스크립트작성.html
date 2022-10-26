@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">자바스크립트 무작정 따라하기!!!!!!!!!!!!</a>
+    <br><br>
+    <button id="btn1">디자인바꾸기 짠!</button>&nbsp&nbsp<button id="btn2">되돌리기 짠!</button>
+    <br>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <h1>오늘은 12/08일</h1>
+
+    <p>즐거운 JavaScript 수업입니닷!</p>
+    <!--html 내에 자바 스크립트를 작성할 수 있는 영역-->
+    <script>
+        document.querySelector("#btn1").addEventListener("click",function(){
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color="white"
+            
+        })
+
+        // 아이디 btn2 클릭 시 배경색 하양색으로 글시색 검정색으로
+        document.querySelector("#btn2").addEventListener("click", function(){
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color="black"
+        })
+    
+    
+    </script>
+</body>
+</html>

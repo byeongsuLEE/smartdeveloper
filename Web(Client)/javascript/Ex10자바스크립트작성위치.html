@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 자바 스크립트 파일 불러오기-->
+    <!-- 브라우저가 자바스크립 파일을 다운오는 과정이 필요-->
+    <!-- 이 과정 동안에는 랜더링을 할수 가 없음(사용자가 화면에 컨텐츠를 보여줄수없다)-->
+
+    <script src="./Ex10.js"></script>
+    <!-- async: 비동기 방식으로 가져온다-->
+    <!-- 렌더링동안 병렬로 다운로드 명령
+    다운로드 , 렌더링 속도 /시간 절약할 수 있음. 실행 할떄는 렌더링을 잠시 멈춘다
+    원하는 대로 화면이 보이지 않을 수 있따라는 단점!-->
+    <script async src="./Ex10.js"></script>  
+    <!-- 모든 외부파일을 다운받는다. 병렬로 실행-->
+    <!-- 렌더링이 모두 완료후에 실행-->
+    <!-- src와 async src 단점들을 해결-->
+    <script defer src="./Ex10.js"></script>  
+    
+    
+    
+
+</head>
+<body>
+    <!-- onclick ㅣ 버튼을 클릭했을때 자바스크립트 기능을 호출-->
+    <button onclick="a()">버튼</button>
+    <button onclick="alert('마우스올림')">버튼2</button>
+    <button onmouseenter="alert('버튼3번에 마우스올림')">버튼3</button>
+    <butoon onmouseleave="alert('버튼4')">버튼4</butoon>
+</body>
+</html>

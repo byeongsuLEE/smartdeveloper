@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width : 200px;
+            height : 200px;
+            background-color: rgb(91, 61, 21);
+
+        }
+        .div1{
+            /* border : 테투리 굵기 ,선타입(solid = 실선) ,선 색깔  */
+            /* dotted :점선   dashed ---*/
+            border : 10px solid rebeccapurple;
+            border : 10px dotted red;
+            border : 10px dashed red;
+
+            box-sizing: border-box;
+        }
+        .div2{
+            /* border - radius : 테투리를 둥글게 만들수 있음 */
+            /* 왼쪽상단 오른쪽 상단 오른쪽하단 왼쪽하단 시계방향 */
+            /*width 절반 값 = 동그라미 */
+            /* 영역은 그대로고 보여지는것만 동그라미다*/
+            border-radius: 100px 0px 100px 0px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>
