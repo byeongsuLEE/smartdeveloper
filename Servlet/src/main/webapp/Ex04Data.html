@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Data 보내기</h1>
+	<!--
+	form 태그 : server로 데이터를 보내주기위한 태그
+	데이터 전송 필수 3가지
+	데이터 가지고 어디롤 요청할지 : form 태그의 action
+	어떤 데이터를 가져가는가  : input 태그의 name 속성
+	언제 요청을 보낼것인가 : submit 타입의 input 또는 button
+	 -->
+	
+	<!-- 
+	일반적으로 이런식
+	<form action="http://localhost:8081/Servlet/Ex04">
+	우리 프로젝트안으로 보내기 때문에 action ="Ex04"
+	-->
+	
+	
+	<!-- 
+	인코딩
+	EUC-KR/ UTF-8
+	하나로 통일 시켜야 한글 문제가 발생하지않는다.
+	
+	GET 방식 
+	Servers 프로젝트 > server.xml파일의 63번째줄 Connector 태그에
+	URIEncoding 속성을 추가
+	
+	POST방식
+	데이터를 꺼내기 직전에 request객체의 encoding 방식을 지정
+	
+	 -->
+	<form action="Ex04" method="post">
+		Data : <input type="text" name = "data">
+		
+		
+		<input type ="submit" value ="데이터전송">
+		
+		<button>데이터 전송 </button>
+	
+	
+	
+	</form>
+
+</body>
+</html>
