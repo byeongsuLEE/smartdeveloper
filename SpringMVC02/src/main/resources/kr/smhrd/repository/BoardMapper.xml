@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+이 파일을 sql쿼리 문들을 모아둔 파일이다.
+이곳에서 태그는 정해진 태그만 사용할 수 있다.
+mybatis-3-mapper.dtd 에 태그가 정의 되어있다.
+
+
+ -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.smhrd.repository.BoardMapper">
+  <!--  board table 모든 게시물을 가져오는 SQL 
+	  <select id ="메소드 이름"> 메소드이름을 맞춰줘야된다.
+	  쿼리를 테그로 묶어서 dao 메소드랑 연결시켜야된다.
+	  
+	  dao가  이 boarMapper.xml 파일을 어떻게 연결할건가?
+	  -namespace= "org.mybatis.example.BlogMapper">
+	  -namespace는 레파짓토리에 있는 어떤 dao파일과 연결될지 표시한다.
+	   
+-->
+  <!--  board table 모든 게시물을 가져오는 SQL -->
+ 
+  <select id ="getList" resultType ="kr.smhrd.entity.Board">
+  select * from board order by idx desc
+  </select>
+  <insert id="register" parameterType="kr.smhrd.entity.Board">
+  	insert into board(memId,title,content,writer)
+  		values(#{memId},#{title},#{content},#{writer})
+  </insert>
+  
+  <!--  파라미터 값이 한개일때는 parameterTyPE 안써도된다. -->
+  <select id="get" resultType ="kr.smhrd.entity.Board" >
+  select * from board where idx=#{idx}
+  
+  </select>
+  
+  <delete id="remove">
+ 
+ 	delete from board where idx=#{idx}
+ </delete>
+ 
+ 	<update id="update"  parameterType="kr.smhrd.entity.Board" >
+ 		<!-- paramater가 3개니까 타입 지정 -->
+ 		update board set title = #{title},content=#{content} where idx=#{idx}
+ 	
+ 	
+ 	</update>
+ 	
+ 	<update id="countUpdate">
+ 	
+ 	update board set count =count+1 where idx =#{idx}
+ 	
+ 	</update>
+ 	
+ 	<select id="Login" parameterType="kr.smhrd.entity.Member" resultType="kr.smhrd.entity.Member">
+ 	select * from member where memId = #{memId} and memPwd=#{memPwd}
+ 	</select>
+ 	
+</mapper>
